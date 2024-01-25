@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <link rel="stylesheet" href="Protfolio-css.css">
+</head>
+
+<body>
+
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars burgerlines"></i>
+    </label>
+    <label class="logo">Ry.</label>
+    <ul>
+      <li><a class="active" href="Home.html">Home</a></li>
+      <li><a href="Aboutme.html">About Me</a></li>
+      <li><a href="Experience.html">Experience</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+    <img src="protfolio-pics/moon.png" id="icon">
+  </nav>
+
+  <div class="contact-page flex">
+    <div class="contact-container flex">
+      <h1 class="txt1 contact-email">
+        <a href="mailto:Tawfikalabed2021@gmail.com">Click to send me an email</a>
+      </h1>
+      <p class="txt2">
+        If you have ideas, projects, or just want to chat, feel free to reach out. Let's connect and make things
+        happen!✌️
+      </p>
+      <div class="contact-icons flex">
+        <a href="https://github.com/Ryzex911" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/_9wgvy?igsh=cDY5eHE4MzZ4bWFk" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+    <img class="contact-img" src="protfolio-pics/contact (2).png" alt="An illustrative image." />
+  </div>
+</body>
+
+<script>
+  var icon = document.getElementById("icon");
+  icon.onclick = function () {
+    document.body.classList.toggle("dark-theme");
+    if (document.body.classList.contains("dark-theme")) {
+      icon.src = "protfolio-pics/moon.png";
+    } else {
+      icon.src = "protfolio-pics/sun.png";
+
+    }
+  }
+
+</script>
+
+
+</html>

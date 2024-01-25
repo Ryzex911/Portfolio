@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="Protfolio-css.css">
+</head>
+
+<body>
+
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars burgerlines"></i>
+    </label>
+    <label class="logo">Ry.</label>
+    <ul>
+      <li><a class="active" href="Home.html">Home</a></li>
+      <li><a href="Aboutme.html">About Me</a></li>
+      <li><a href="Experience.html">Experience</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+    <img src="protfolio-pics/moon.png" id="icon">
+  </nav>
+
+
+  <section class="start-text-image">
+    <div class="my-image"> <img class="me" src="protfolio-pics/me.jpeg" alt=""></div>
+    <div class="start-text">
+      <div class="intro-text" id="introText">
+        <h2 class="intro-text">Hi👋I am Ryzex</h2>
+      </div>
+      <div class="sub-intro">
+        <p class="sub-intro">Roc Nijmegen student mastering software development.</p>
+      </div>
+      <div class="button-container">
+        <button id="downloadCvBtn" class="my-cv">Download my CV</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var downloadCvBtn = document.getElementById('downloadCvBtn');
+
+      downloadCvBtn.addEventListener('click', function () {
+        var downloadLink = document.createElement('a');
+
+
+        downloadLink.href = 'https://www.mediafire.com/file/e0mbmj4wi8nfic9/Screenshot+2024-01-19+092749.png/file'
+        downloadLink.download = 'Ryzex_CV.pdf';
+        document.body.appendChild(downloadLink);
+
+        downloadLink.click();
+
+        document.body.removeChild(downloadLink);
+      });
+    });
+  </script>
+
+
+  <script>
+    var icon = document.getElementById("icon");
+    icon.onclick = function () {
+      document.body.classList.toggle("dark-theme");
+      if (document.body.classList.contains("dark-theme")) {
+        icon.src = "protfolio-pics/moon.png";
+      } else {
+        icon.src = "protfolio-pics/sun.png";
+
+      }
+    }
+
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var introText = document.getElementById('introText');
+      var introTextContent = "Hi I am Ryzex";
+
+      function typeWriterEffect(text, speed) {
+        let i = 0;
+        const interval = setInterval(function () {
+          introText.textContent = text.substring(0, i);
+          i++;
+
+          if (i > text.length) {
+            clearInterval(interval);
+          }
+        }, speed);
+      }
+
+      typeWriterEffect(introTextContent, 70);
+    });
+
+  </script>
+</body>
+
+</html>
